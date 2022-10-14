@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb quest</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/drop-default-styles.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="body-inner">
+        <img src="./src/explosion.png" alt="" class="bomb__img bomb__img--explosion bomb__img--hidden">      
+        <div class="container bomb">
+            <img src="./src/logo.svg" alt="" class="bomb__logo" width="167" height="270">
+            <div class="bomb__inner">
+                <img src="./src/bomb.jpg" alt="" class="bomb__img bomb__img--bomb">                    
+                <p class="bomb__timer">
+                    00:00
+                </p>
+                <p class="bomb__result bomb__result--start bomb__result--visible">Напишите код в строке ниже</p>
+                <p class="bomb__result bomb__result--wrong-code">Неверный код</p>
+                <p class="bomb__result bomb__result--time-out">Время вышло</p>
+                <p class="bomb__result bomb__result--success">Введен правильный код</p>
+                <div class="bomb__input-wrapper">
+                    <input type="text" class="bomb__input" placeholder="Введите код..." onchange="checkCode(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+.body-inner {
+  position: relative;
+  font-family: 'Lato', sans-serif;
+  padding: 69px 112px;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  background-color: #AEA9D4;
+  overflow: hidden;
+}
+
+.bomb {
+  position: relative;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 167px auto 167px;
+      grid-template-columns: 167px auto 167px;
+  grid-column-gap: 30px;
+}
+
+.bomb__logo {
+  position: relative;
+  z-index: 5;
+}
+
+.bomb__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.bomb__img {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: opacity 0.5s linear;
+  -o-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
+}
+
+.bomb__img--bomb {
+  max-height: 100%;
+  max-width: 600px;
+}
+
+.bomb__img--explosion {
+  z-index: 6;
+  width: 150%;
+}
+
+.bomb__img--hidden {
+  opacity: 0;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.bomb__timer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 302.749px;
+  line-height: 363px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 3.90643px 68.3626px rgba(0, 0, 0, 0.18);
+}
+
+.bomb__timer--hidden {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.bomb__input-wrapper {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 45px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.bomb__input-wrapper--hidden {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.bomb__input {
+  padding: 28px 28px 35px;
+  width: 100%;
+  max-width: 485px;
+  background: #FFFFFF;
+  -webkit-border-radius: 100.15px;
+          border-radius: 100.15px;
+  border-width: 0;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  /* identical to box height */
+  text-align: center;
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+  -webkit-transition: 0.1s linear border, 0.1s linear padding;
+  -o-transition: 0.1s linear border, 0.1s linear padding;
+  transition: 0.1s linear border, 0.1s linear padding;
+}
+
+.bomb__input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bomb__input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bomb__input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bomb__input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bomb__input:focus {
+  padding: 23px 28px 30px;
+  border: 5px solid #61302A;
+}
+
+.bomb__result {
+  position: relative;
+  z-index: 6;
+  padding: 30px;
+  background: #FFFFFF;
+  -webkit-border-radius: 44.4931px;
+          border-radius: 44.4931px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 39.1539px;
+  line-height: 47px;
+  text-align: center;
+  color: #61302A;
+  width: 100%;
+  max-width: 1000px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+
+.bomb__result--wrong-code, .bomb__result--time-out {
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
+}
+
+.bomb__result--visible {
+  height: auto;
+  display: block;
+  opacity: 1;
+}
